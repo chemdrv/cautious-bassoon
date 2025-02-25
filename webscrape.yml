@@ -1,0 +1,9 @@
+name: webscrape
+dependencies:
+ - numpy
+ - pandas
+ - matplotlib
+ - scipy
+ - jupyterlab
+ - ipympl
+ - beautifulsoup4
