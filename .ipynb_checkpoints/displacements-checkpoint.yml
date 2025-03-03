@@ -1,0 +1,8 @@
+name: displacements
+dependencies:
+ - numpy
+ - pandas
+ - matplotlib
+ - scipy
+ - jupyterlab
+ - ipympl
