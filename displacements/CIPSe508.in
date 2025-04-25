@@ -1,0 +1,66 @@
+&CONTROL
+  calculation = 'vc-relax',
+  pseudo_dir = './',
+  outdir='./'
+  prefix = 'test',
+etot_conv_thr=1.D-7,
+forc_conv_thr=2.D-6,
+nstep =200,
+/
+&SYSTEM
+  ibrav = 4,
+  celldm(1) = 12.0809,
+  celldm(3) = 2.0867,
+  nat = 20,
+  ntyp = 4,
+  ecutwfc = 40,
+  ecutrho = 320,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  degauss = 0.02,
+  input_dft = 'pbe',
+  vdw_corr = 'grimme-d2',
+  london_s6 = 0.5,
+/
+&ELECTRONS
+  electron_maxstep = 100,
+  diagonalization = 'david',
+  conv_thr = 1.0d-6,
+  mixing_beta = 0.12,
+/
+&IONS
+/
+&CELL
+  press = 0.0,
+/
+ATOMIC_SPECIES
+P   30.974    p_pbe_v1.5.uspp.F.UPF
+Cu  63.546    cu_pbe_v1.2.uspp.F.UPF
+In  114.818   in_pbe_v1.4.uspp.F.UPF
+Se  78.971    se_pbe_v1.uspp.F.UPF
+
+ATOMIC_POSITIONS (crystal)
+Cu 0.648307105 0.335525544 0.293516220
+Cu 0.331411893 0.619530391 0.749755637
+In 0.003963198 0.005514133 0.235801196
+In 0.008283046 -0.012566585 0.757402954
+P 0.333265398 0.667702743 0.167811826
+P 0.335207553 0.667976718 0.336076039
+P 0.667706274 0.333864352 -0.165711485
+P 0.664837820 0.331776389 0.665083002
+Se 0.011810138 0.338319151 0.117665953
+Se -0.341472624 -0.326980033 0.124568594
+Se 0.326355241 -0.010064983 0.118096785
+Se -0.338721051 -0.011337207 0.376765168
+Se 0.333429983 0.337233774 0.375056640
+Se 0.012866472 -0.331884644 0.380666530
+Se -0.013495063 -0.335562008 -0.119195752
+Se 0.342974986 0.328962253 -0.123733839
+Se -0.333952257 0.005477432 -0.120827431
+Se 0.342104586 0.008821384 0.624658890
+Se -0.327984637 -0.342935131 0.621924322
+Se -0.007245294 0.334862242 0.623148858
+
+ 
+K_POINTS {automatic}
+6 6 6 1 1 1
